@@ -15,8 +15,15 @@ const GlobalStyles = createGlobalStyle`
         --primaryBackground: #202833;
         --secondaryBackground: #2a3443;
       
-        --primaryTextColor: white;
-        --secondaryTextColor: #52b7b5;
+        --primaryTextColor: #FBFBFB;
+        --highlightedTextColor: #52b7b5;
+      
+        --headerTextSize: 2em;
+        --mainTextSize: 1.1em;
+        --miniTextSize: 0.8em;
+      
+        --minWidth: 150px;
+        --maxWidth: 1920px;
     }
     
     
@@ -32,10 +39,10 @@ const GlobalStyles = createGlobalStyle`
     }
     &::-webkit-scrollbar {
         width: 10px;
-        background: #FBFBFB;
+        background: var(--primaryTextColor);
     }
     &::-webkit-scrollbar-thumb {
-        background: #0A8474;
+        background: var(--highlightedTextColor);
         border-radius: 10px;
         padding-top: 3200px;
     }
@@ -50,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
       -webkit-text-fill-color: #0A8474;
-      -webkit-box-shadow: 0 0 0 30px white inset !important;
+      -webkit-box-shadow: 0 0 0 30px var(--primaryTextColor) inset !important;
 }
 `;
 

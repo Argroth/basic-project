@@ -6,7 +6,7 @@ import Container from "../../layout/components/container";
 const Index = () => {
     return (
         <Container height="500px">
-            123
+            AboutMe
         </Container>
     );
 };

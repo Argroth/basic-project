@@ -5,41 +5,41 @@ import Container from "./components/container";
 import ContentContainer from "./components/contentContainer";
 
 const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     
-    width: 200px;
-    height: 75px;
+  width: 200px;
+  height: 75px;
 `;
 
 const NavItems = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
     
-    width: 100%;
+  width: 100%;
 `;
 
 const ParenthesesSpan = styled.span`
   &:hover{
-    color: var(--secondaryTextColor);
+    color: var(--highlightedTextColor);
   }
 `;
 
 const NavItem = styled.div`
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 
-    margin-left: 20px;
-    font-size: 1.5em;
+  margin-left: 20px;
+  font-size: var(--mainTextSize);
   
   &:hover{
     cursor: pointer;
   }
   
   &:hover ${ParenthesesSpan} {
-    color: var(--secondaryTextColor);
+    color: var(--highlightedTextColor);
     transition: 0.2s;
   }
   
@@ -51,7 +51,7 @@ const NavItem = styled.div`
     height: 4px;
     bottom: -4px;
     left: 0;
-    background-color: var(--secondaryTextColor);
+    background-color: var(--highlightedTextColor);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
