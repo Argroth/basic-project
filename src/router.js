@@ -6,8 +6,7 @@ import thunk from "redux-thunk";
 import CombinedReducers from './reducers';
 
 //import components
-import Index from './components/index';
-import NotFound from './components/not-found';
+import Index from './main-page/index';
 
 class AppRouter extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class AppRouter extends Component {
                     <Router>
                         <Switch>
                             <Route exact path="/" component={Index} />
-                            <Route path="*"  component={NotFound} />
+                            {/*<Route path="*"  component={NotFound} />*/}
                         </Switch>
                     </Router>
                 </Provider>
