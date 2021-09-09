@@ -5,6 +5,9 @@ const Container = styled.div`
   height: 13px;
   width: 13px;
   
+  margin-top: 5px;
+  margin-right: 10px;
+  
   background: var(--highlightedTextColor);
   border: solid 2px;
   border-color: var(--primaryBackground);

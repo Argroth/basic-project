@@ -7,6 +7,7 @@ import Navbar from "../layout/navbar";
 //imports main components
 import Header from './header/index';
 import AboutMe from './about-me/index';
+import Skills from './skills/index';
 
 const GlobalStyles = createGlobalStyle`
   
@@ -76,6 +77,7 @@ class Index extends Component {
 
                 <Header />
                 <AboutMe />
+                <Skills />
             </Container>
         );
     }

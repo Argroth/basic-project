@@ -8,21 +8,29 @@ import Title from "../../layout/components/title";
 const AboutMeBackground = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-items: center;
   justify-content: center;
   
-  width: 90%;
+  width: 100vw;
   height: 100%;
 `;
 
 const PhotoContainer = styled.div`
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  width: 60%;
+  height: 100%;
+`;
+
+const PhotoContent = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   
-  width: 30%;
-  height: 100%;
+  width: 210px;
 `;
 
 const Photo = styled.div`
@@ -32,9 +40,9 @@ const Photo = styled.div`
   
   width: 200px;
   height: 200px;
-  border: solid 2px;
+  border: solid 4px;
   border-color: var(--primaryBackground);
-  outline: 3px solid var(--highlightedTextColor);
+  box-shadow: 0px 0px 0px 3px var(--highlightedTextColor);
   border-radius: 100px;
   
   background-color: gray;
@@ -67,23 +75,58 @@ const Social = styled.div`
   background-color: var(--highlightedTextColor);
 `;
 
+const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  width: 40%;
+`;
+
+const MainText = styled.p`
+  margin-top: 40px;
+  font-size: var(--mainTextSize);
+`;
+
+const Description = styled.p`
+  margin-top: 40px;
+  font-size: var(--mainTextSize);
+`;
+
 const Index = () => {
     return (
         <Container height="500px">
             <AboutMeBackground>
-                <Title>
-                    .aboutMe( )
-                </Title>
                 <ContentContainer>
                     <PhotoContainer>
-                        <Photo />
-                        <TextMain>Łukasz Gronczakiewicz</TextMain>
-                        <SocialsContainer>
-                            <Social />
-                            <Social />
-                            <Social />
-                        </SocialsContainer>
+                        <PhotoContent>
+                            <Photo />
+                            <TextMain>Łukasz Gronczakiewicz</TextMain>
+                            <SocialsContainer>
+                                <Social />
+                                <Social />
+                                <Social />
+                            </SocialsContainer>
+                        </PhotoContent>
                     </PhotoContainer>
+
+                    <TextContainer>
+                        <Title>
+                            .aboutMe( )
+                        </Title>
+
+                        <MainText>
+                            Trochę dłuższy opis opisu poniżej xd
+                        </MainText>
+
+                        <Description>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Description>
+
+                        <Description>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Description>
+                    </TextContainer>
                 </ContentContainer>
             </AboutMeBackground>
         </Container>

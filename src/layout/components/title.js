@@ -5,9 +5,6 @@ import Decorator from "./decorator";
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
-  
-  margin-top: 50px;
   
   font-size: var(--titleSize);
 `;

@@ -7,8 +7,6 @@ const Container = styled.div`
   height: 100%;
   
   max-width: var(--maxWidth);
-  
-  //background-color: var(--secondaryBackground);
 `;
 
 const ContentContainer = (props) => {
