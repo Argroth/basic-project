@@ -5,17 +5,18 @@ const Container = styled.button`
   position: relative;
   padding: 1em 1.5em;
   border: none;
+  width: 250px;
+  margin-top: 30px;
   background-color: transparent;
   cursor: pointer;
   outline: none;
   font-size: 1.2rem;
-  margin: 1em 0.8em;
-  color: ${props=> props.reversed === true? "#0A8474" : "white"};
+  color: ${props=> props.reversed === true? "var(--highlightedTextColor)" : "var(--primaryTextColor)"};
   transition: 1s;
 
   &:hover{
-    background-color: #00293F;
-    color: ${props=> props.reversed === true? "white" : "#0A8474"};
+    background-color: var(--primaryBackground);
+    color: ${props=> props.reversed === true? "var(--primaryTextColor)" : "var(--highlightedTextColor)"};
     transition: 1s;
   }
 
@@ -36,8 +37,8 @@ const Container = styled.button`
     right: 0;
     border-top-color: transparent;
     border-left-color: transparent;
-    border-bottom-color: #0A8474;
-    border-right-color: #0A8474;
+    border-bottom-color: var(--highlightedTextColor);
+    border-right-color: var(--highlightedTextColor);
   }
 
   &::before{
@@ -45,8 +46,8 @@ const Container = styled.button`
     left: 0;
     border-bottom-color: transparent;
     border-right-color: transparent;
-    border-top-color: #0A8474;
-    border-left-color: #0A8474;
+    border-top-color: var(--highlightedTextColor);
+    border-left-color: var(--highlightedTextColor);
   }
 
   &:hover:after,
@@ -56,10 +57,10 @@ const Container = styled.button`
   }
 `;
 
-const Button = () => {
+const Button = (props) => {
     return (
         <Container>
-            Asdf
+            {props.children}
         </Container>
     );
 };

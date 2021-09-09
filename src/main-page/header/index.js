@@ -50,6 +50,8 @@ const TextMini = styled.p`
 
 const Description = styled.p`
   font-size: var(--mainTextSize);
+  
+  max-width: 500px;
 `;
 
 const Logo = styled.div`
@@ -79,9 +81,9 @@ const Index = () => {
                             </TextMain>
 
                             <Description>
-                                Asdfgasda
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </Description>
-                            <Button />
+                            <Button>Dowiedz się więcej!</Button>
                         </TextContainer>
 
                         <Logo>

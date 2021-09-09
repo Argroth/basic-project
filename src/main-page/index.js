@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
         --headerTextSize: 2em;
         --mainTextSize: 1.1em;
         --miniTextSize: 0.8em;
+        --titleSize: 1.4em;
       
         --minWidth: 150px;
         --maxWidth: 1920px;
@@ -71,7 +72,6 @@ class Index extends Component {
         return (
             <Container>
                 <GlobalStyles />
-
                 <Navbar />
 
                 <Header />
