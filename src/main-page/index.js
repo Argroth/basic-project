@@ -8,6 +8,9 @@ import Navbar from "../layout/navbar";
 import Header from './header/index';
 import AboutMe from './about-me/index';
 import Skills from './skills/index';
+import Projects from './projects/index';
+import Contact from './contact/index';
+import Footer from './footer/index';
 
 const GlobalStyles = createGlobalStyle`
   
@@ -78,6 +81,9 @@ class Index extends Component {
                 <Header />
                 <AboutMe />
                 <Skills />
+                <Projects />
+                <Contact />
+                <Footer />
             </Container>
         );
     }
