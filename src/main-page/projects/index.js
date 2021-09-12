@@ -23,7 +23,7 @@ const ProjectsContainer = styled.div`
 class Index extends Component {
     render() {
         return (
-            <Container height="500px">
+            <Container height="100%">
                 <ContentContainer>
                     <DescriptionContainer>
                         <Title>.projects( )</Title>

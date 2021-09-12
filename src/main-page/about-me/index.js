@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from 'react-icons/all';
 
 import Container from "../../layout/components/container";
 import ContentContainer from "../../layout/components/contentContainer";
@@ -72,7 +73,15 @@ const Social = styled.div`
   width: 20px;
   height: 20px;
   
-  background-color: var(--highlightedTextColor);
+  font-size: 1.4em;
+  color: var(--highlightedTextColor);
+  transition: 0.2s;
+  
+  &:hover{
+    cursor: pointer;
+    color: var(--primaryTextColor);
+    transition: 0.2s;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -103,9 +112,9 @@ const Index = () => {
                             <Photo />
                             <TextMain>Łukasz Gronczakiewicz</TextMain>
                             <SocialsContainer>
-                                <Social />
-                                <Social />
-                                <Social />
+                                <Social><FaFacebookSquare /></Social>
+                                <Social><FaGithubSquare /></Social>
+                                <Social><FaLinkedin /></Social>
                             </SocialsContainer>
                         </PhotoContent>
                     </PhotoContainer>
