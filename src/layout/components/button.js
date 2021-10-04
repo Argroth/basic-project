@@ -5,7 +5,7 @@ const Container = styled.button`
   position: relative;
   padding: 1em 1.5em;
   border: none;
-  width: 250px;
+  width: ${props=> props.width? props.height : "250px"};
   margin-top: 30px;
   background-color: transparent;
   cursor: pointer;
@@ -59,7 +59,7 @@ const Container = styled.button`
 
 const Button = (props) => {
     return (
-        <Container>
+        <Container width={props.width}>
             {props.children}
         </Container>
     );

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 
+import Button from "../../layout/components/button";
+
 const ProjectCardContainer = styled.div`
   display: flex;
   align-items: center;
@@ -8,19 +10,19 @@ const ProjectCardContainer = styled.div`
   
   width: 240px;
   height: 300px;
+  margin-bottom: 30px;
 
   border: 2px solid var(--highlightedTextColor);
   border-radius: 10px;
-  
-  margin-bottom: 30px;
 
   transition: 0.2s;
   
+  overflow-y: hidden;
+  
   &:hover {
     cursor: pointer;
-    transition: 0.2s;
-    
-    transform: scale(115%);
+    transition: all 0.2s;
+    height: 580px;
   }
 
   &:last-child{
@@ -28,9 +30,17 @@ const ProjectCardContainer = styled.div`
   }
 `;
 
+const CardContent = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  height: 580px;
+`;
+
 const PhotoContainer = styled.div`
-  width: 100%;
-  height: 150px;
+  width: 240px;
+  height: 140px;
   
   border-radius: 7px 7px 0 0;
   
@@ -39,7 +49,7 @@ const PhotoContainer = styled.div`
 
 const CardTitle = styled.p`
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--primaryTextColor);
   font-size: var(--mainTextSize);
 `;
@@ -50,7 +60,7 @@ const Tags = styled.div`
   align-self: flex-end;
   
   width: 240px;
-  height: 100px;
+  height: 80px;
 `;
 
 const Tag = styled.div`
@@ -79,18 +89,37 @@ const Tag = styled.div`
   }
 `;
 
+const Description = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 95%;
+  margin-top: 25px;
+  
+  text-align: center;
+`;
+
 const ProjectCard = (props) => {
     return (
         <ProjectCardContainer>
-            <PhotoContainer />
-            <CardTitle>{props.data.title}</CardTitle>
-            <Tags>
-                {props.data.tags.map(tag => {
-                    return(
-                        <Tag>{tag}</Tag>
-                    )
-                })}
-            </Tags>
+            <CardContent>
+                <PhotoContainer />
+                <CardTitle>{props.data.title}</CardTitle>
+                <Tags>
+                    {props.data.tags.map(tag => {
+                        return(
+                            <Tag>{tag}</Tag>
+                        )
+                    })}
+                </Tags>
+
+                <Description>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </Description>
+
+                <Button width="150px">Sprawdź!</Button>
+            </CardContent>
         </ProjectCardContainer>
     );
 };
